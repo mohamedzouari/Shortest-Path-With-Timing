@@ -1,3 +1,8 @@
+# Shortest Path finder
+
+ Starting from departure city, with the goal to reach a destination in the shortest time, we are given a list of trips with source, destination, departure time, and duration. The algorithm aims to find the shortest path from source to destination with respect to time deadlines.
+
+
 ### Concept
   - After Parsing the Input, we generate a graph from the structure with start and a finish
   - We Apply a shortest path algorithm based on dijkstra seach and we add a timing check in order to update the paths
