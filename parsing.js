@@ -68,9 +68,14 @@ fs.readFile(filename, 'utf8', function(err, data) {
   //Total Travelling Time is Results[0]
 
   //Arrival Time
-  ArrivalHr = Math.trunc(Results[1]/60);
+  ArrivalHr = Math.trunc(Results[1]/60)%24;
   ArrivalMin = Results[1]%60;
 
-  console.log(ArrivalHr+':'+ArrivalMin);
+  //adding 0s in case time is one digit
+  ArrivalHrStr = (ArrivalHr.toString().length === 2 ) ? ArrivalHr.toString() : '0'+ArrivalHr.toString();
+  ArrivalMinStr = (ArrivalMin.toString().length === 2 ) ? ArrivalMin.toString() : '0'+ArrivalMin.toString();
+
+  //Output
+  console.log(ArrivalHrStr+':'+ArrivalMinStr);
 
 });
